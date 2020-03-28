@@ -38,7 +38,10 @@ public class CalculateRIM {
 
         int i = 0;
         StringBuilder sb = new StringBuilder();
-
+        if (number<0){
+            number =  Math.abs(number);
+            sb.append('-');
+           }
         while ((number > 0) && (i < rim_symbol.size())) {
             RimSymbolForConvert currentSymbol = rim_symbol.get(i);
             if (currentSymbol.Get_Value() <= number) {
